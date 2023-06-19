@@ -47,12 +47,7 @@ async def start(_, message):
                     await add_users_to_db(user_id)
                     return await message.reply_text("You Has Been Added To My Database, That Case You Got 500 coins 💰.") 
              else:
-                 return await message.reply_photo(photo=START_IMAGE, 
-                      caption=START_TEXT.format(name=mention))
-
-      else:          
-          return await message.reply_photo(photo=START_IMAGE, 
-               caption=START_TEXT.format(name=mention))
+                 return await message.reply_text(" ")
 
 
 @bot.on_message(filters.command("profile", prefix))
