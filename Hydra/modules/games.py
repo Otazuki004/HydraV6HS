@@ -6,7 +6,7 @@ from Hydra.database.coins import add_coins_to_db, get_coins_from_users
 from Hydra.database.main import get_users_list
 from pyrogram import filters, enums
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
-from Hydra.plugins.main import ask_to_dm_first
+from Hydra.modules.main import ask_to_dm_first
 
 
 dice_users = []
