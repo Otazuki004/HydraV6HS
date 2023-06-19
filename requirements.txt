@@ -1,6 +1,7 @@
 future
 git+https://github.com/ytdl-patched/yt-dlp
 envparse==0.2.0
+pyromod
 multicolorcaptcha
 faker
 ffmpeg
