@@ -1,7 +1,7 @@
 import random
 from Hydra import prefix
 from Hydra import pgram as bot
-from Hydra.plugins.main import ask_to_dm_first
+from Hydra.modules.main import ask_to_dm_first
 from Hydra.database.main import get_users_list
 from Hydra.database.coins import add_coins_to_db, get_coins_from_users
 from Hydra.database.count_won_lose import add_won_count, add_lose_count, get_bet_count
