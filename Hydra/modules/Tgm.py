@@ -1,5 +1,5 @@
 import os
-from Vexera import BOT as bot
+from Hydra import pgram as bot
 from pyrogram import filters, Client
 from telegraph import upload_file
 
