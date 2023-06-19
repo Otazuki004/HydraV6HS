@@ -48,7 +48,7 @@ async def vsong(client, message):
         file_name,
         duration=int(ytdl_data["duration"]),
         thumb=preview,
-        caption=f"**{title} Powered by: @Hyper_Speed0**",
+        caption=f"**{title}**",
     )
 
     await msg.delete()
@@ -73,10 +73,10 @@ ydl_opts = {
 
 
 @HS.on_message(filters.command("song"))
-def download_song(_, message):
+async def download_song(_, message):
     query = " ".join(message.command[1:])
     print(query)
-    m = message.reply("🔄 Searching....")
+    m = await bot.send_message(message.chat.id, "🔄 Searching....")
     ydl_ops = {"format": "bestaudio[ext=m4a]"}
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
@@ -89,12 +89,12 @@ def download_song(_, message):
         duration = results[0]["duration"]
 
     except Exception as e:
-        m.edit(
+        await m.edit(
             "⚠️ No results were found. Make sure you typed the information correctly"
         )
         print(str(e))
         return
-    m.edit("📥 Downloading ..")
+    await m.edit("📥 Downloading ..")
     try:
         with yt_dlp.YoutubeDL(ydl_ops) as ydl:
             info_dict = ydl.extract_info(link, download=False)
@@ -104,16 +104,16 @@ def download_song(_, message):
         for i in range(len(dur_arr) - 1, -1, -1):
             dur += int(float(dur_arr[i])) * secmul
             secmul *= 60
-        m.edit("📤 Uploading ..")
+        await m.edit("📤 Uploading ..")
 
         message.reply_audio(
             audio_file,
             thumb=thumb_name,
             title=title,
-            caption=f"**{title} Powered by: @Hyper_Speed0**",
+            caption=f"**{title} **",
             duration=dur,
         )
-        m.delete()
+        await m.delete()
     except Exception as e:
         m.edit(f"**Error:**{e} ")
         print(e)
