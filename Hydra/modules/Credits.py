@@ -11,7 +11,7 @@ async def awake(event):
     HYDRA = """
     Credits
 BOT OWNER : [OTAZUKI](https://telegram.dog/OTAZUKI_004)
-REPO OWNER : [𓆩𝗧ᴏᴏɴ 𝗟ɪɴᴋᴢ𓆪](https://telegram.dog/Toon_LinkZ)
+REPO OWNER : [𓆩𝗛ʏᴘᴇʀ 𝗦ᴘᴇᴇᴅ𓆪 ™](https://telegram.dog/Hyper_Speed0)
 HELPER : [🖤「 Gᴛ Asʜ™ 」🖤](https://telegram.dog/Awesome_GtashXD)
 SUPPORTER : [𝗧𝗢𝗙𝗨 鬼](https://telegram.dog/Awesome_Tofu)
 
@@ -43,10 +43,12 @@ Tʜᴀɴᴋs Fᴏʀ Usɪɴɢ Oᴜʀ Bᴏᴛ!
 
 
 __help__ = """
-/bet - Bet some Coins 
+/bet - Bet some Coins (only works on group)
 /profile - To See Your Game Profile
 /send - To send coins to another player
-...
+/football - Play football 
+/basketball - play basketball 
+/dice - play dice 
 """
 
 __mod_name__ = "Game 🎮"
