@@ -1,6 +1,4 @@
-
 import asyncio
-
 from Hydra import pgram as bot
 from Hydra import prefix
 from Hydra.database.main import add_users_to_db, get_users_list
@@ -8,6 +6,7 @@ from Hydra.database.coins import get_coins_from_users, add_coins_to_db
 from Hydra.database.profile import add_profile_to_users, get_profile_from_users
 from Hydra.database.count_won_lose import get_won_count
 from Hydra.database.level import get_users_level
+from Hydra.database.lottery import get_lottery_code, get_lottery_coins
 from pyrogram import filters, enums 
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton 
 
