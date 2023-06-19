@@ -91,11 +91,11 @@ PM_START_TEXT = """
 ❍ *Uptime:* `{}`
 ❍ `{}` *Users, Across* `{}` *Chats.*
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-❍ Last Update : 14:3:23
-❍ Patch Name : Music Edition
+❍ Last Update : 14:6:23
+❍ Patch Name : Game 🎮 Edition 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-❍ Next Patch : 15:4:2023
-❍ Next Patch Name : UB EDITION
+❍ Next Patch : 17:7:2023
+❍ Next Patch Name : Music 2.0
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The 𝐇𝐞𝐥𝐩 Button Below To Know My Abilities♥︎ ××
 """
