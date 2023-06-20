@@ -337,6 +337,9 @@ tg.MessageHandler = CustomMessageHandler
 #prefix for commands
 prefix = [".","!","?","*","$","#","/"]
 
+#img for ub
+IMG = "https://te.legra.ph/file/b22875edc28ec29cb1708.jpg"
+
 print("Launching V-5...")
 print("Installing HydraV-5")
 print("Checking Errors")
