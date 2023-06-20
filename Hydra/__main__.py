@@ -46,6 +46,7 @@ from Hydra import (
     tbot,
     updater,
     ubot,
+    gamerhs,
 )
 
 # needed to dynamically load modules
@@ -749,14 +750,15 @@ START_HYDRA = f"""
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ❍ 𝗣ʏʀᴏɢʀᴀᴍ ᴠᴇʀsɪᴏɴ : {pyrover}
 ❍ 𝗧ᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : {tlhver}
+❍ 𝗚ᴀᴍᴇ Vᴇʀsɪᴏɴ : {gamerhs}
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The ʜᴇʟᴘ Button Below To Know My Abilities ××
 """
 
 START_BUTTON = [
     [
-        Button.url("[► Help ◄]", "https://t.me/hydra_100_bot?start=help"),
-        Button.url("[► 𝗛ʏᴘᴇʀ 𝗦ᴘᴇᴇᴅ ◄]", "https://t.me/Hyper_Speed0"),
+        Button.url("[►Help◄]", "https://t.me/hydra_100_bot?start=help"),
+        Button.url("𝗛ʏᴘᴇʀ 𝗦ᴘᴇᴇᴅ", "https://t.me/Hyper_Speed0"),
     ]
 ]
 if __name__ == "__main__":
