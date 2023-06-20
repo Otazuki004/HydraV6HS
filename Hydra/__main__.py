@@ -758,7 +758,7 @@ START_HYDRA = f"""
 START_BUTTON = [
     [
         Button.url("[►Help◄]", "https://t.me/hydra_100_bot?start=help"),
-        Button.url("𝗛ʏᴘᴇʀ 𝗦ᴘᴇᴇᴅ", "https://t.me/Hyper_Speed0"),
+        Button.url("𝗛ʏᴘᴇʀ 𝗦ᴘᴇᴇᴅ™", "https://t.me/Hyper_Speed0"),
     ]
 ]
 if __name__ == "__main__":
