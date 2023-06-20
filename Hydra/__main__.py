@@ -768,7 +768,5 @@ if __name__ == "__main__":
     tbot.send_file(-1001859707851, PHOTO, caption=START_HYDRA, buttons=START_BUTTON)
     pgram.start()
     pub.start()
-    with pub:
-        pub.send_message("-1001859707851", "Hydra Ub Client Started, Check @Hydra_100_bot!")
     main()
     idle()
