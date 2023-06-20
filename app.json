@@ -169,10 +169,10 @@
          "required": false,
          "value": ""
       },
-      "PATCH_NAME": {
-       "description": "Enter The Patch Update Name",
+      "Game_Version": {
+       "description": "Enter The Game Version",
        "required": false,
-       "value": "V-6"
+       "value": "1.32.3"
       }
       
    }
