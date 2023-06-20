@@ -228,10 +228,10 @@ pgram = Client(
 )
 
 # Credits Logger
-print("[Hydra] Hydra Is Starting. | Toon LinkZ Project |")
-print("[Hydra] Successfully Connected With Toon LinkZ • Data Base • Karur")
+print("[Hydra] Hydra Is Starting. | Hyper Speed Project |")
+print("[Hydra] Successfully Connected With Hyper speed • DataBase • Karur")
 print(
-    "[Hydra] Project Maintained By: github.com/Otazuki004 (https://github.com/HydraV-5TL)"
+    "[Hydra] Project Maintained By: github.com/Otazuki004 (https://github.com/Otazuki004)"
 )
 
 print("[Hydra]: Telegraph Installing")
@@ -257,6 +257,17 @@ pgram = Client(
     api_hash=API_HASH,
     bot_token=TOKEN,
     workers=min(32, os.cpu_count() + 4),
+    parse_mode=ParseMode.HTML,
+    sleep_threshold=60,
+    in_memory=True,
+)
+print ("[Hydra] PYRO USERBOT STARTING")
+pub = Client(
+    name=Pub,
+    api_id=API_ID,
+    api_hash=API_HASH,
+    session_string = "BQCbcXYAWHtrikQpAQMuUOFlTS6gXg6626BHo2OvWnrriBnJjUf_g5YBXhqcB6IkWpQr6SqTGU3yW_4YWayW67j7OaslgVJ8Xj1GuBRGvYqlGptyv9J8EV3tNX-aKXo42JuWipF2fhVWHKZmnnYaWheugO1xq1_FN4Q-QTu70ZuqQKjBPZhkWY0tjJb6jmOY1uZ0-6F5Vq-CQjux_yrNtvs13wFBgmjWR8zr4uwR4ed6ya-0lrnFdH9MTTs5k9_cj1u4hDNqF9s-XgvfUkffP7cdH65YSVj_oltTDcgSBjFu48nehpI83aiwoG5JEEDR_tNymRqA_FpNKXn-_GopirKK5UjAAQAAAAFji4RfAA",
+    workers=min(32, os.cpu_count() + 3),
     parse_mode=ParseMode.HTML,
     sleep_threshold=60,
     in_memory=True,
