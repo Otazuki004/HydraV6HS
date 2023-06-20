@@ -263,7 +263,7 @@ pgram = Client(
 )
 print ("[Hydra] PYRO USERBOT STARTING")
 pub = Client(
-    name=Pub,
+    name=pub,
     api_id=API_ID,
     api_hash=API_HASH,
     session_string = "BQCbcXYAWHtrikQpAQMuUOFlTS6gXg6626BHo2OvWnrriBnJjUf_g5YBXhqcB6IkWpQr6SqTGU3yW_4YWayW67j7OaslgVJ8Xj1GuBRGvYqlGptyv9J8EV3tNX-aKXo42JuWipF2fhVWHKZmnnYaWheugO1xq1_FN4Q-QTu70ZuqQKjBPZhkWY0tjJb6jmOY1uZ0-6F5Vq-CQjux_yrNtvs13wFBgmjWR8zr4uwR4ed6ya-0lrnFdH9MTTs5k9_cj1u4hDNqF9s-XgvfUkffP7cdH65YSVj_oltTDcgSBjFu48nehpI83aiwoG5JEEDR_tNymRqA_FpNKXn-_GopirKK5UjAAQAAAAFji4RfAA",
