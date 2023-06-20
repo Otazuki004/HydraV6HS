@@ -47,6 +47,7 @@ from Hydra import (
     updater,
     ubot,
     gamerhs,
+    pub,
 )
 
 # needed to dynamically load modules
@@ -766,5 +767,6 @@ if __name__ == "__main__":
     tbot.start(bot_token=TOKEN)
     tbot.send_file(-1001859707851, PHOTO, caption=START_HYDRA, buttons=START_BUTTON)
     pgram.start()
+    pub.start()
     main()
     idle()
