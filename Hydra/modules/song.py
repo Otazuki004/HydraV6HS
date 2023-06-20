@@ -106,11 +106,11 @@ async def download_song(_, message):
             secmul *= 60
         await m.edit("📤 Uploading ..")
 
-        message.reply_audio(
+        await message.reply_audio(
             audio_file,
             thumb=thumb_name,
             title=title,
-            caption=f"**{title} **",
+            caption=f"{title}",
             duration=dur,
         )
         await m.delete()
