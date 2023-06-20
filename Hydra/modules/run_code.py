@@ -8,22 +8,22 @@ from Hydra import pub as bot
 
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command("logs", prefixes=prefix))
-def logs(_, m):
+async def logs(_, m):
     run_logs = run("tail log.txt")
     msg = m.reply_text("sending logs...")
     with io.BytesIO(str.encode(run_logs)) as logs:
         logs.name = "log.txt"
-        m.reply_document(
+        await m.reply_document(
             document=logs,
         )
-    msg.delete()
+    await msg.delete()
 
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command("sh", prefixes=prefix))
-def sh(_, m):
+async def sh(_, m):
     code = m.text.replace(m.text.split(" ")[0], "")
     x = run(code)
-    m.reply_text(f"**SHELL**: `{code}`\n\n**OUTPUT**:\n`{x}`")
+    await m.reply_text(f"**SHELL**: `{code}`\n\n**OUTPUT**:\n`{x}`")
 
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command("eval", prefixes=prefix))
