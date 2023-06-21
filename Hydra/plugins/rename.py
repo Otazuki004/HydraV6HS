@@ -19,5 +19,5 @@ async def rename(_, message):
         path = reply.download(file_name=filename)
        await x.edit("Uploading.....")
         await message.reply_document(path)
-        await os.remove(path)
+        os.remove(path)
 #under @Hyper_Speed0
