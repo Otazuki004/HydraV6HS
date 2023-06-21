@@ -14,9 +14,9 @@ async def rename(_, message):
     except Exception as e:
         await Hydra.send_message(message.chat.id, f"{e}")
         if reply := message.reply_to_message:
-        x = await message.reply_text("Downloading.....")
-        path = reply.download(file_name=filename)
-       await x.edit("Uploading.....")
-        await message.reply_document(path)
-        os.remove(path)
+            x = await message.reply_text("Downloading.....")
+            path = reply.download(file_name=filename)
+            await x.edit("Uploading.....")
+            await message.reply_document(path)
+            os.remove(path)
 #under @Hyper_Speed0
