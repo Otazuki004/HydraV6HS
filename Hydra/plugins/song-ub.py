@@ -7,9 +7,9 @@ from pyrogram import filters
 from youtube_search import YoutubeSearch
 from yt_dlp import YoutubeDL
 from Hydra import pub as HS
+from Hydra import DEV_USERS, prefix
 
-
-@HS.on_message(filters.command("video"))
+@HS.on_message(filters.command("video", prefixes=prefix) & filters.user(DEV_USERS))
 async def vsong(client, message):
     ydl_opts = {
         "format": "best",
@@ -72,7 +72,7 @@ ydl_opts = {
 }
 
 
-@HS.on_message(filters.command("song"))
+@HS.on_message(filters.command("song", prefixes=prefix) & filters.user(DEV_USERS))
 async def download_song(_, message):
     query = " ".join(message.command[1:])
     print(query)
