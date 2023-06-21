@@ -173,6 +173,11 @@
        "description": "Enter The Game Version",
        "required": false,
        "value": ""
+      },
+      "OWNER_NAME": {
+       "description": "Enter The Bot Owner Name",
+       "required": true,
+       "value": "🖤「 𝐎ᴛᴀᴢᴜᴋɪ™ 」🖤 ✘ 𝗛ʏᴘᴇʀ 𝗦ᴘᴇᴇᴅ™"
       }
       
    }
