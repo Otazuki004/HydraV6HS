@@ -12,7 +12,8 @@ async def rename(_, message):
         filename = message.text.replace(message.text.split(" ")[0], "")
 
     except Exception as e:
-        await Hydra.send_message(message.chat.id, f"{e}")
+        await message.reply_text(f"{e}")
+        
         if reply := message.reply_to_message:
             x = await message.reply_text("Downloading.....")
             path = reply.download(file_name=filename)
