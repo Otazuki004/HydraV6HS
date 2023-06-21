@@ -22,26 +22,28 @@ async def logs(_, m):
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command("sh", prefixes=prefix))
 async def sh(_, message):
+    mmm = await pub.send_message(message.chat.id, "processing..")
     code = message.text.replace(message.text.split(" ")[0], "")
     reply_to_ = message
     if message.reply_to_message:
         reply_to_ = message.reply_to_message
     x1 = run(code)
     x2 = f"""
-**INPUT:**
+𝗜𝗡𝗣𝗨𝗧:
 {code}
-**OUTPUT:**
+
+𝗢𝗨𝗧𝗣𝗨𝗧:
 {x1}
 """
     if len(x2) > 4096:
         with io.BytesIO(str.encode(x2)) as out_file:
             out_file.name = "output.txt"
             await reply_to_.reply_document(
-                document=out_file, caption=cmd, disable_notification=True
+                document=out_file, caption=code, disable_notification=True
             )
     else:
         await reply_to_.reply_text(x2)
-    await status_message.delete()
+    await mmm.delete()
 
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command("eval", prefixes=prefix))
