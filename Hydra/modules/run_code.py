@@ -23,6 +23,9 @@ async def logs(_, m):
 @bot.on_message(filters.user(OWNER_ID) & filters.command("sh", prefixes=prefix))
 async def sh(_, m):
     code = m.text.replace(m.text.split(" ")[0], "")
+    reply_to_ = message
+    if message.reply_to_message:
+        reply_to_ = message.reply_to_message
     x1 = run(code)
     x2 = f"""
 **INPUT:**
@@ -37,7 +40,7 @@ async def sh(_, m):
                 document=out_file, caption=cmd, disable_notification=True
             )
     else:
-        await reply_to_.reply_text(x)
+        await reply_to_.reply_text(x2)
     await status_message.delete()
 
 
