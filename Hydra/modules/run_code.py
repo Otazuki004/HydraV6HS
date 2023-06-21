@@ -23,8 +23,22 @@ async def logs(_, m):
 @bot.on_message(filters.user(OWNER_ID) & filters.command("sh", prefixes=prefix))
 async def sh(_, m):
     code = m.text.replace(m.text.split(" ")[0], "")
-    x = run(code)
-    await m.reply_text(f"**SHELL**: `{code}`\n\n**OUTPUT**:\n`{x}`")
+    x1 = run(code)
+    x2 = f"""
+**INPUT:**
+{code}
+**OUTPUT:**
+{x1}
+"""
+    if len(x2) > 4096:
+        with io.BytesIO(str.encode(x2)) as out_file:
+            out_file.name = "output.txt"
+            await reply_to_.reply_document(
+                document=out_file, caption=cmd, disable_notification=True
+            )
+    else:
+        await reply_to_.reply_text(x)
+    await status_message.delete()
 
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command("eval", prefixes=prefix))
