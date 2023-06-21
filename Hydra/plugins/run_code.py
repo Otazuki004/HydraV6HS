@@ -22,7 +22,7 @@ async def logs(_, m):
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command("sh", prefixes=prefix))
 async def sh(_, message):
-    mmm = await pub.send_message(message.chat.id, "processing..")
+    mmm = await bot.send_message(message.chat.id, "processing..")
     code = message.text.replace(message.text.split(" ")[0], "")
     reply_to_ = message
     if message.reply_to_message:
