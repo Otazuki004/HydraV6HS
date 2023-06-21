@@ -12,7 +12,7 @@ async def join_chat(_, m):
     link = m.text.split(" ")[1]
     bot.join_chat(link)
     chat = bot.get_chat(link)
-    name = chat.title
+    name = m.chat.title
     await m.reply_text(f"Successfully joined {name}")
 
 
@@ -24,5 +24,5 @@ async def leave_chat(_, m):
     link = m.text.split(" ")[1]
     bot.leave_chat(link)
     chat = bot.get_chat(link)
-    name = chat.title
+    name = m.chat.title
     await m.reply_text(f"Successfully left {name}")
