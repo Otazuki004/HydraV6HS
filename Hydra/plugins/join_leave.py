@@ -5,7 +5,7 @@ from Hydra import pub as bot
 
 
 @bot.on_message(filters.command("join", prefixes=prefix) & filters.user(uuu))
-def join_chat(_, m):
+async def join_chat(_, m):
     if len(m.command) < 2:
         m.reply_text("ɢɪᴠᴇ ᴀ ᴊᴏɪɴ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪɴᴠɪᴛᴇ  ʟɪɴᴋ")
         return
@@ -13,11 +13,11 @@ def join_chat(_, m):
     bot.join_chat(link)
     chat = bot.get_chat(link)
     name = chat.title
-    m.reply_text(f"Successfully joined {name}")
+    await m.reply_text(f"Successfully joined {name}")
 
 
 @bot.on_message(filters.command("leave", prefixes=prefix) & filters.user(uuu))
-def leave_chat(_, m):
+async def leave_chat(_, m):
     if len(m.command) < 2:
         m.reply_text("ɢɪᴠᴇ ᴀ ʟᴇғᴛ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪɴᴠɪᴛᴇ  ʟɪɴᴋ")
         return
@@ -25,4 +25,4 @@ def leave_chat(_, m):
     bot.leave_chat(link)
     chat = bot.get_chat(link)
     name = chat.title
-    m.reply_text(f"Successfully left {name}")
+    await m.reply_text(f"Successfully left {name}")
