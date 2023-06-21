@@ -21,8 +21,8 @@ async def logs(_, m):
 
 
 @bot.on_message(filters.user(OWNER_ID) & filters.command("sh", prefixes=prefix))
-async def sh(_, m):
-    code = m.text.replace(m.text.split(" ")[0], "")
+async def sh(_, message):
+    code = message.text.replace(message.text.split(" ")[0], "")
     reply_to_ = message
     if message.reply_to_message:
         reply_to_ = message.reply_to_message
