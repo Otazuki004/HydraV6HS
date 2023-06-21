@@ -3,7 +3,8 @@ import sys
 import traceback
 from subprocess import getoutput as run
 from pyrogram import filters
-from Hydra import prefix, OWNER_ID
+from Hydra import prefix
+from Hydra import DEV_USERS as OWNER_ID
 from Hydra import pub as bot
 
 
