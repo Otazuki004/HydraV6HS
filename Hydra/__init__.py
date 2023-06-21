@@ -272,7 +272,7 @@ pub = Client(
     parse_mode=ParseMode.HTML,
     sleep_threshold=60,
     in_memory=True,
-    plugins=dict(root="Hydra/plugins),
+    plugins=dict(root="Hydra/plugins"),
 )
 print("[INFO]: INITIALZING AIOHTTP SESSION")
 aiohttpsession = ClientSession()
