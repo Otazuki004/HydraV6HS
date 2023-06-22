@@ -1,4 +1,3 @@
-import config
 from pyrogram import filters, enums
 from pyrogram.types import ChatPrivileges
 from Hydra import pub as HS
