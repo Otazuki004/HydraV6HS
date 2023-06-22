@@ -3,8 +3,9 @@ from pyrogram import filters
 from Hydra import pub as bot
 from Hydra import prefix, IMG, gamerhs
 from Hydra import OWNER_NAME as own
+from Hydra import DEV_USERS as hsss
 
-@bot.on_message(filters.command("alive", prefixes=prefix) & filters.user(5965055071))
+@bot.on_message(filters.command("alive", prefixes=prefix) & filters.user(hsss))
 async def alive(_, m):
     await m.reply_photo(
         IMG, caption = f"""~  𝐻𝑦𝑑𝑟𝑎 𝑆𝑦𝑠𝑡𝑒𝑚:**
