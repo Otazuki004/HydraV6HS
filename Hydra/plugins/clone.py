@@ -4,7 +4,7 @@ from Hydra.database.clone_db import store_profile, get_profile
 from Hydra import OWNER_ID as DEV_USERS
 from Hydra import prefix 
 
-@HS.on_message(filters.command("cpfp", prefixes=prefix) & filters.user(DEV_USERS))
+@HS.on_message(filters.command("clone", prefixes=prefix) & filters.user(DEV_USERS))
 async def clone(_, message):
     if not message.reply_to_message:
          try:
@@ -50,7 +50,7 @@ async def save_pfp(_, message):
       await store_profile(user_id=user_id, profile=photo_id, first_name=first_name, bio=bio)
       return await message.edit("Successfully Saved!")
           
-@HS.on_message(filters.command("rnpfp", prefixes=prefix) & filters.user(DEV_USERS))
+@HS.on_message(filters.command("return", prefixes=prefix) & filters.user(DEV_USERS))
 async def return_profile(_, message):
      user_id = message.from_user.id
      if (await get_profile(user_id)) == False:
