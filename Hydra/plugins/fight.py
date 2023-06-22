@@ -13,16 +13,16 @@ async def fighting(_, message):
          return await ask_to_dm_first(message)
     if not message.reply_to_message:
         
-          return await message.reply("Reply to the User")
+          return await message.reply("Reply to the User, Use @Hydra_100_bot")
     replied_user_id = message.reply_to_message.from_user.id
     coins = await get_coins_from_users(user_id)
 
-    if coins < 1500:
-         return await message.reply("you atleast hand 1500 coins to fight!, Use @Hydra_100_Bot")
+    if coins < 1000:
+         return await message.reply("you need atleast hand 1000 coins to fight!, Use @Hydra_100_Bot")
 
     coins = await get_coins_from_users(replied_user_id)
     if coins < 1000:
-         return await message.reply("you atleast hand 1000 coins to fight!")
+         return await message.reply("both players need atleast hand 1000 coins to fight!")
 
     from_user_id = user_id
     x = await message.reply("Let's Begin The Fight UwU, Use @Hydra_100_Bot")
