@@ -5,22 +5,21 @@ from Hydra import pub as bot
 
 
 @bot.on_message(filters.command("join", prefixes=prefix) & filters.user(uuu))
-async def join_chat(_, m):
-    if len(m.command) < 2:
-        m.reply_text("ɢɪᴠᴇ ᴀ ᴊᴏɪɴ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪɴᴠɪᴛᴇ  ʟɪɴᴋ")
+async def join_chat(_, message):
+    if len(message.command) < 2:
+        message.reply_text("ɢɪᴠᴇ ᴀ ᴊᴏɪɴ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪɴᴠɪᴛᴇ  ʟɪɴᴋ")
         return
-    link = await m.text.split(" ")[1]
+    link = await message.text.split("join")[1]
     await bot.join_chat(link)
-    chat = await bot.get_chat(link)
-    await m.reply_text(f"Successfully joined")
+    await message.reply_text(f"Successfully joined")
 
 
 @bot.on_message(filters.command("leave", prefixes=prefix) & filters.user(uuu))
-async def leave_chat(_, m):
-    if len(m.command) < 2:
-        m.reply_text("ɢɪᴠᴇ ᴀ ʟᴇғᴛ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪɴᴠɪᴛᴇ  ʟɪɴᴋ")
+async def leave_chat(_, message):
+    if len(message.command) < 2:
+        message.reply_text("ɢɪᴠᴇ ᴀ ʟᴇғᴛ ɢʀᴏᴜᴘ ᴜsᴇʀɴᴀᴍᴇ ᴏʀ ɪɴᴠɪᴛᴇ  ʟɪɴᴋ")
         return
-    link = await m.text.split(" ")[1]
+    link = await message.text.split("leave")[1]
     await bot.leave_chat(link)
     chat = await bot.get_chat(link)
-    await m.reply_text(f"Successfully left")
+    await message.reply_text(f"Successfully left")
