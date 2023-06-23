@@ -739,9 +739,6 @@ def main():
     updater.idle()
 
 
-
-    ubot.start()
-
 PHOTO = "https://graph.org/file/ee4fc1bb7a1ef86b6fc41.jpg"
 
 START_HYDRA = f"""
