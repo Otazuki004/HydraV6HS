@@ -25,7 +25,7 @@ async def cinfo(_, m):
         text += f"✪ ID: {id}\n\n"
         text += f"✪ NAME: {name}\n\n"
         text += f"✪ USERNAME: @{username}\n\n"
-        text += f"✪ MENTION: {[link](t.me/{username})}"
+        text += f"✪ MENTION: [link](t.me/{username})"
         await m.reply_text(text)
         await message.delete()
         return
@@ -36,7 +36,7 @@ async def cinfo(_, m):
         text += f"✪ ID: {id}\n\n"
         text += f"✪ NAME: {name}\n\n"
         text += f"✪ USERNAME: @{username}\n\n"
-        text += f"✪ MENTION: {[link](t.me/{username})}"
+        text += f"✪ MENTION: [link](t.me/{username})"
         await m.reply_photo(photo=photo, caption=(text))
         await message.delete()
 
@@ -84,7 +84,7 @@ async def info(_, m):
         username = info.username
         user_bio = info.bio
         dc_id = info.dc_id
-        user_link = f"{[link](tg://user?id={user_id})}"
+        user_link = f"[link](tg://user?id={user_id})"
         await m.reply_text(
             text=no_reply_user.format(
                 user_id, dc_id, first_name, username, user_link, user_bio
