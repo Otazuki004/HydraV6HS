@@ -21,36 +21,36 @@ async def cinfo(_, m):
         username = reply.sender_chat.username
         pfp = reply.sender_chat.photo
     if not pfp:
-        text = f"✪ **TYPE:** Channel\n\n"
-        text += f"✪ **ID:** {id}\n\n"
-        text += f"✪ **NAME:** {name}\n\n"
-        text += f"✪ **USERNAME:** @{username}\n\n"
-        text += f"✪ **MENTION:** [link](t.me/{username})"
+        text = f"✪ TYPE: Channel\n\n"
+        text += f"✪ ID: {id}\n\n"
+        text += f"✪ NAME: {name}\n\n"
+        text += f"✪ USERNAME: @{username}\n\n"
+        text += f"✪ MENTION: {[link](t.me/{username})}"
         await m.reply_text(text)
         await message.delete()
         return
     image = reply.sender_chat.photo
     if image:
         photo = await bot.download_media(image.big_file_id)
-        text = f"✪ **TYPE:** Channel\n\n"
-        text += f"✪ **ID:** {id}\n\n"
-        text += f"✪ **NAME:** {name}\n\n"
-        text += f"✪ **USERNAME:** @{username}\n\n"
-        text += f"✪ **MENTION:** [link](t.me/{username})"
+        text = f"✪ TYPE: Channel\n\n"
+        text += f"✪ ID: {id}\n\n"
+        text += f"✪ NAME: {name}\n\n"
+        text += f"✪ USERNAME: @{username}\n\n"
+        text += f"✪ MENTION: {[link](t.me/{username})}"
         await m.reply_photo(photo=photo, caption=(text))
         await message.delete()
 
 
 no_reply_user = """ ╒═══「 Appraisal results:」
 
-**ɪᴅ**: `{}`
-**ᴅᴄ**: `{}`
-**ғɪʀsᴛ ɴᴀᴍᴇ**: {}
-**ᴜsᴇʀɴᴀᴍᴇ**: @{}
-**ᴘᴇʀᴍᴀʟɪɴᴋ**: {}
-**ᴜsᴇʀʙɪᴏ**: {}
+ɪᴅ: `{}`
+ᴅᴄ: `{}`
+ɴᴀᴍᴇ: {}
+ᴜsᴇʀɴᴀᴍᴇ: @{}
+ᴘᴇʀᴍᴀʟɪɴᴋ: {}
+ᴜsᴇʀʙɪᴏ: {}
 
-**Meet Me Here🙈 @Besties_XD ✨🥀**
+**Meet Me Here🙈 @FutureCity005 ✨🥀**
 """
 
 
@@ -84,7 +84,7 @@ async def info(_, m):
         username = info.username
         user_bio = info.bio
         dc_id = info.dc_id
-        user_link = f"[link](tg://user?id={user_id})"
+        user_link = f"{[link](tg://user?id={user_id})}"
         await m.reply_text(
             text=no_reply_user.format(
                 user_id, dc_id, first_name, username, user_link, user_bio
