@@ -32,7 +32,7 @@ async def rename(_, message):
     msg = await message.reply_text("⬇️ File has downloading...")
     path = await message.reply_to_message.download(file_name=filename)
     await msg.edit_text("⬆️ File has uplaoding")
-    await message.reply_document(document=path, thumb=thumb_id)
+    await message.reply_document(document=path)
     await msg.delete()
     os.remove(path)
     return
