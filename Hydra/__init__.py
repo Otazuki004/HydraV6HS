@@ -108,7 +108,7 @@ if ENV:
     SUPPORT_CHAT = os.environ.get("SUPPORT_CHAT", None)
     STRING_SESSION = os.environ.get(
         "STRING_SESSION"
-    )  # Telethon Based String Session (2nd ID) [ From https://repl.it/@SpEcHiDe/GenerateStringSession ]
+    )  #use pyrogram v2 session 
     SPAMWATCH_SUPPORT_CHAT = os.environ.get("SPAMWATCH_SUPPORT_CHAT", None)
     SPAMWATCH_API = os.environ.get("SPAMWATCH_API", None)
     REPOSITORY = os.environ.get("REPOSITORY", "")
@@ -257,17 +257,14 @@ pgram = Client(
     api_id=API_ID,
     api_hash=API_HASH,
     bot_token=TOKEN,
-    workers=min(32, os.cpu_count() + 4),
-    parse_mode=ParseMode.HTML,
-    sleep_threshold=60,
-    in_memory=True,
+    plugins=dict(root="Hydra/modules"),
 )
 print ("[Hydra] PYRO USERBOT STARTING")
 pub = Client(
     name=PyroGram,
     api_id=API_ID,
     api_hash=API_HASH,
-    session_string = "BQCbcXYAWHtrikQpAQMuUOFlTS6gXg6626BHo2OvWnrriBnJjUf_g5YBXhqcB6IkWpQr6SqTGU3yW_4YWayW67j7OaslgVJ8Xj1GuBRGvYqlGptyv9J8EV3tNX-aKXo42JuWipF2fhVWHKZmnnYaWheugO1xq1_FN4Q-QTu70ZuqQKjBPZhkWY0tjJb6jmOY1uZ0-6F5Vq-CQjux_yrNtvs13wFBgmjWR8zr4uwR4ed6ya-0lrnFdH9MTTs5k9_cj1u4hDNqF9s-XgvfUkffP7cdH65YSVj_oltTDcgSBjFu48nehpI83aiwoG5JEEDR_tNymRqA_FpNKXn-_GopirKK5UjAAQAAAAFji4RfAA",
+    session_string=STRING_SESSION,
     plugins=dict(root="Hydra/plugins"),
 )
 print("[INFO]: INITIALZING AIOHTTP SESSION")
@@ -275,7 +272,7 @@ aiohttpsession = ClientSession()
 # ARQ 
 print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ("https://thearq.tech", "YIECCC-NAJARO-OLLREW-SJSRIP-ARQ", aiohttpsession)
-print("[Hydra]: Connecting To Toon LinkZ • Data Base • Karur • PostgreSQL Database")
+print("[Hydra]: Connecting To Hyper Speed • Data Base • Karur • PostgreSQL Database")
 
 ubot = Client(session_string=STRING_SESSION, api_id=API_ID, api_hash=API_HASH, name="ubot")
 print(
