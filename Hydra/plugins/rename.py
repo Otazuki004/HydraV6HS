@@ -13,7 +13,7 @@ async def rename(_, message):
     except Exception as e:
         print(e)
 
-    if reply := await message.reply_to_message:
+    if reply := message.reply_to_message:
         x = await message.reply_text("Downloading.....")
         path = await reply.download(file_name=filename)
         await x.edit("Uploading.....")
