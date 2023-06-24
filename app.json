@@ -171,8 +171,8 @@
       },
       "Game_Version": {
        "description": "Enter The Game Version",
-       "required": false,
-       "value": ""
+       "required": true,
+       "value": "1.32.3"
       },
       "OWNER_NAME": {
        "description": "Enter The Bot Owner Name",
