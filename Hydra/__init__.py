@@ -281,7 +281,7 @@ bot1 = Client(
     name=PyroGram,
     api_id=API_ID,
     api_hash=API_HASH,
-    session_string=STRING_SESSION,
+    session_string = "BQFKgqkAE-9f4GVika2-LY43HZfoOCLTBGFgwXZWCI8TBfSw7aSQv8Yr1iXQF-gLTrF1wdAcnhSFvtTLbgTv5OIIaUye-APBx9tkrlM0ckwG6eb8jQwiqAV2cfXad28pXDK1lqFiIMQw-MXCf1rGLKWiz-mRK8dUKGUuzSY5qbf9p2DQLE9M5SQTwfIvpoQ57vtlPc3eZD1DjX9FG38L0alXgFbXX2GnHKBgjE-Yta7FDobjqAcGk-GlTXRea8rEsGoikA4bsuN8qp5vAqv0NluogANYk5aPhUAFRUJs7Mma6VnN68m8C-xeHBfCcRgJANrF0EGv5hYlb09OUclLRfAXqenbkgAAAAFVXmQdAA",
     plugins=dict(root="Hydra/Music"),
 )
 
