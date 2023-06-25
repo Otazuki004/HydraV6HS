@@ -45,7 +45,6 @@ from Hydra import (
     pgram,
     tbot,
     updater,
-    ubot,
     gamerhs,
     pub,
     music,
@@ -271,7 +270,7 @@ def start(update: Update, context: CallbackContext):
     else:
         update.effective_message.reply_animation(
             random.choice(GROUP_START_IMG),
-            caption=f"<b>Hey, User I'm alive!\nHaven't sleep since</b>: <code>{uptime}</code>",
+            caption=f"<b>Hey, I'm alive!\nHaven't sleep since</b>: <code>{uptime}</code>",
             parse_mode=ParseMode.HTML,
             reply_markup=InlineKeyboardMarkup(
                 [
