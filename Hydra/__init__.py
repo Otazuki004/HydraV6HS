@@ -266,6 +266,15 @@ pub = Client(
     session_string=STRING_SESSION,
     plugins=dict(root="Hydra/plugins"),
 )
+print ("[INFO] Music Client Starting V-6.5")
+music = Client(
+    name=PyroGram,
+    api_id=API_ID,
+    api_hash=API_HASH,
+    bot_token=TOKEN,
+    plugins=dict(root="Hydra/Music"),
+)
+
 print("[INFO]: INITIALZING AIOHTTP SESSION")
 aiohttpsession = ClientSession()
 # ARQ 
