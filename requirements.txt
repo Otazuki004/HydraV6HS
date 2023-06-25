@@ -1,6 +1,5 @@
 future
 git+https://github.com/ytdl-patched/yt-dlp
-pyrogram@master
 py-tgcalls
 envparse==0.2.0
 pyromod
