@@ -20,7 +20,6 @@ import pyromod.listen
 from pymongo import MongoClient
 StartTime = time.time()
 from dotenv import load_dotenv
-from pytgcalls import PyTgCalls
 
 # enable logging
 logging.basicConfig(
@@ -285,16 +284,13 @@ bot1 = Client(
     plugins=dict(root="Hydra/Music"),
 )
 
-call_py = PyTgCalls(bot1)
-
-print("[INFO]: INITIALZING AIOHTTP SESSION")
+print("INSTALLING AIOHTTP SESSION")
 aiohttpsession = ClientSession()
 # ARQ 
 print("[INFO]: INITIALIZING ARQ CLIENT")
 arq = ARQ("https://thearq.tech", "YIECCC-NAJARO-OLLREW-SJSRIP-ARQ", aiohttpsession)
 print("[Hydra]: Connecting To Hyper Speed • Data Base • Karur • PostgreSQL Database")
 
-ubot = Client(session_string=STRING_SESSION, api_id=API_ID, api_hash=API_HASH, name="ubot")
 print(
     "[Hydra]: Connecting To Database • Hydra Userbot"
 )
@@ -355,29 +351,9 @@ prefix = [".","!","?","*","$","#","/"]
 #img for ub
 IMG = "https://te.legra.ph/file/b22875edc28ec29cb1708.jpg"
 
-print("Launching V-5...")
-print("Installing HydraV-5")
-print("Checking Errors")
-print ("Some Errors Found")
-print ("Successfully Installed V-6")
-
 print ("Installing MongoDB")
 MONGODB_URL = "mongodb+srv://nandhaxd:rw5T7YJRjsE3fmk3@cluster0.80igexg.mongodb.net/?retryWrites=true&w=majority"
 MONGO = MongoClient(MONGODB_URL)
 DATABASE = MONGO.Hydra
 print ("MongoDB Successfully installed")
-GROUP_MODE = "True"
-contact_filter = filters.create(
-    lambda _, __, message:
-    (message.from_user and message.from_user.is_contact) or message.outgoing
-)
-
-
-if GROUP_MODE == ("True" or "true"):
-    grp = True
-else:
-    grp = False
-
-GRPPLAY = grp
-
 LOGGER.info("[Success]")
