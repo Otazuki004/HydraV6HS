@@ -1,4 +1,4 @@
-from Hydra import DATABASE
+from Hydra import DATABASE as mongodb
 
 
 db = mongodb.USERS
