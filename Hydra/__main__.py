@@ -47,8 +47,6 @@ from Hydra import (
     updater,
     gamerhs,
     pub,
-    music,
-    bot1,
 )
 
 # needed to dynamically load modules
