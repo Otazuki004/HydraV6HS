@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 import time
-
+from pyrogram import filters
 import aiohttp
 import httpx
 import spamwatch
