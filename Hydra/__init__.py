@@ -366,7 +366,7 @@ MONGODB_URL = "mongodb+srv://nandhaxd:rw5T7YJRjsE3fmk3@cluster0.80igexg.mongodb.
 MONGO = MongoClient(MONGODB_URL)
 DATABASE = MONGO.Hydra
 print ("MongoDB Successfully installed")
-
+GROUP_MODE = "True"
 contact_filter = filters.create(
     lambda _, __, message:
     (message.from_user and message.from_user.is_contact) or message.outgoing
