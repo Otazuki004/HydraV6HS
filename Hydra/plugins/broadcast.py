@@ -1,13 +1,12 @@
-import config
 import asyncio
 from Hydra import pub as bot 
 from pyrogram import filters
 from Hydra.database.chatsdb import *
 from Hydra.database.usersdb import *
 from pyrogram.enums import ParseMode
-from Hydra import OWNER_ID
+from Hydra import OWNER_ID, prefix
 
-@bot.on_message(filters.user(OWNER_ID) & filters.command(["groupcast","pgroupcast"],config.CMDS))
+@bot.on_message(filters.user(OWNER_ID) & filters.command(["groupcast","pgroupcast"]))
 async def group_cast(_, message):
       reply = message.reply_to_message
       chat = message.chat  
@@ -31,7 +30,7 @@ async def group_cast(_, message):
       return await msg.edit(success.format(done, fail))
          
        
-@bot.on_message(filters.user(OWNER_ID) & filters.command(["usercast","pusercast"],config.CMDS))
+@bot.on_message(filters.user(OWNER_ID) & filters.command(["usercast","pusercast"]))
 async def user_cast(_, message):
       reply = message.reply_to_message
       chat = message.chat  
