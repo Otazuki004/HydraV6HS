@@ -48,7 +48,6 @@ from Hydra import (
     ubot,
     gamerhs,
     pub,
-    call_py,
     music,
     bot1,
 )
@@ -99,7 +98,7 @@ PM_START_TEXT = """
 ❍ Last Update : 14:6:23
 ❍ Patch Name : Game 🎮 Edition 
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-❍ Next Patch : 17:7:2023
+❍ Next Patch : 1:7:2023
 ❍ Next Patch Name : Music 2.0
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
 ➛ Try The 𝐇𝐞𝐥𝐩 Button Below To Know My Abilities♥︎ ××
@@ -753,7 +752,7 @@ START_HYDRA = f"""
 ❍ 𝗧ᴇʟᴇᴛʜᴏɴ ᴠᴇʀsɪᴏɴ : {tlhver}
 ❍ 𝗚ᴀᴍᴇ Vᴇʀsɪᴏɴ : {gamerhs}
 ➖➖➖➖➖➖➖➖➖➖➖➖➖
-➛ Try The ʜᴇʟᴘ Button Below To Know My Abilities ××
+➛ Try The Hᴇʟᴘ Button Below To Know My Abilities ××
 """
 
 START_BUTTON = [
@@ -769,8 +768,6 @@ if __name__ == "__main__":
     pub.start()
     pgram.start()
     music.start()
-    call_py.start()
     bot1.start()
-    
     main()
     idle()
