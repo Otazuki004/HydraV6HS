@@ -736,8 +736,8 @@ def main():
     else:
         tbot.disconnect()
     updater.idle()
-
-
+hsss = ( "-1001816975602", "-1001859707851")
+htt = random.choice(hsss)
 PHOTO = "https://graph.org/file/ee4fc1bb7a1ef86b6fc41.jpg"
 
 START_HYDRA = f"""
@@ -761,7 +761,7 @@ START_BUTTON = [
 if __name__ == "__main__":
     LOGGER.info(f"Successfully loaded modules: {str(ALL_MODULES)}")
     tbot.start(bot_token=TOKEN)
-    tbot.send_file(-1001859707851, PHOTO, caption=START_HYDRA, buttons=START_BUTTON)
+    tbot.send_file(htt, PHOTO, caption=START_HYDRA, buttons=START_BUTTON)
     pub.start()
     pgram.start()
     main()
