@@ -14,11 +14,6 @@ Text = (
 async def awake(event):
   hs = random.choice(Text)
   await event.reply(hs)
-  
-  
-import random 
-from Hydra.events import register
-from Hydra import tbot as tot
 
 Text1 = (
     "Share Your Browsing History to others", "Buy briyani And Show Me", "play minecraft java in your phone", "Give me your Telegram GF ID", "Go to park Propose Any one", "switch off your phone for 10 mins", "Help any Poor peoples", "Go to tea shop Drink tea for free", "give me 1rs", "Join @Toon_LinkZ", "go and exchange your Lover phone", "Just Start me in dm", "go and swim for 30 mins", "Off your Phone And study",
