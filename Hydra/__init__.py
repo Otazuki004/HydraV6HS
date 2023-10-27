@@ -180,7 +180,6 @@ else:
     API_ID = Config.API_ID
     API_HASH = Config.API_HASH
     DB_URI = Config.SQLALCHEMY_DATABASE_URI
-    REDIS_URL = Config.REDIS_URL
     DONATION_LINK = Config.DONATION_LINK
     LOAD = Config.LOAD
     NO_LOAD = Config.NO_LOAD
