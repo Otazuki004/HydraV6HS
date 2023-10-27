@@ -89,6 +89,7 @@ tgcrypto==1.2.3
 pycryptodome
 base58
 pymongo
+numpy
 pymongo[srv]
 httpx
 httpx[http2]
