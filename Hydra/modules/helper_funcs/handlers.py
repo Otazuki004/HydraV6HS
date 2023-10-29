@@ -3,9 +3,8 @@ from pyrate_limiter import (
     Duration,
     Limiter,
 )
-
-from pyrate_limiter.bucket import MemoryListBucket
-from pyrate_limiter.request_rate import RequestRate
+from Hydra.Badass.bucket import MemoryListBucket
+from Hydra.Badass.request_rate import RequestRate
 
 from telegram import Update
 from telegram.ext import CommandHandler, Filters, MessageHandler, RegexHandler
