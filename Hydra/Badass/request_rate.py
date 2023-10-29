@@ -4,7 +4,7 @@ from enum import Enum
 from typing import Any
 from typing import Dict
 
-from .exceptions import ImmutableClassProperty
+from Hydra.Badass.exceptions import ImmutableClassProperty
 
 
 class ResetTypes(Enum):
