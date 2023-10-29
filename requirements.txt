@@ -65,7 +65,7 @@ Pillow
 CurrencyConverter
 googletrans==4.0.0-rc1
 google_trans_new
-pyrate-limiter==2.0.0
+pyrate-limiter
 nekos.py
 tgcrypto
 python-arq==6.0.3
@@ -161,7 +161,7 @@ Pillow==9.2.0
 CurrencyConverter
 googletrans==4.0.0-rc1
 google_trans_new
-pyrate-limiter==2.0.0
+pyrate-limiter
 nekos.py
 tgcrypto
 python-arq==6.0.3
