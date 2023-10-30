@@ -2,11 +2,9 @@ from pyrate_limiter import (
     BucketFullException,
     Duration,
     Limiter,
+    MemoryListBucket,
+    RequestRate,
 )
-
-from Hydra.Badass.bucket import MemoryListBucket
-from Hydra.Badass.request_rate import RequestRate
-
 from telegram import Update
 from telegram.ext import CommandHandler, Filters, MessageHandler, RegexHandler
 
